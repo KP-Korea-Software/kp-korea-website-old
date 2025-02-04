@@ -383,6 +383,12 @@
   width: 100%;
 }
 
+.thumbtwo {
+  border-radius: 4px;
+  box-shadow: 0 1px 4px black;
+}
+
+
 .thumb-noshad {
   border-radius: 4px;
   width: 100%;
