@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="KP-Korea.org - Wedjat" />
+  <meta property="og:description" content="An interpreted programming language" />
+  <title>KP-Korea.org - Juche Software</title>
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/fromBootstrap.css" />
+  <link rel="stylesheet" href="/css/background.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/elements.css" />
+  <link rel="stylesheet" href="/css/responsiveness.css" />
+</head>
+
+<body>
+  <div id="background"></div>
+  <div id="ribbon"></div>
+  <div id="body">
+    <nav class="navbar bg-dark" data-bs-theme="dark">
+      <a class="p-2 logo" href="/index.html"></a>
+      <a class="navbar-item active" href="/pages/software.html">Software</a>
+      <a class="navbar-item" href="/pages/games.html">Games</a>
+      <a class="navbar-item" href="/pages/other.html">Other</a>
+      <a class="navbar-item" href="/pages/author.html">Author</a>
+      <a class="navbar-item" href="/pages/misc.html">Misc</a>
+      <div class="navbar-menu-button-holder">
+        <div class="navbar-menu-button"></div>
+      </div>
+    </nav>
+    <div class="nav-hidden navbar-menu-holder">
+      <div class="navbar-menu">
+        <a class="navbar-menu-item active" href="/pages/software.html">Software</a>
+        <a class="navbar-menu-item" href="/pages/games.html">Games</a>
+        <a class="navbar-menu-item" href="/pages/other.html">Other</a>
+        <a class="navbar-menu-item" href="/pages/author.html">Author</a>
+        <a class="navbar-menu-item" href="/pages/misc.html">Misc</a>
+      </div>
+      <div class="navbar-menu-underlay"></div>
+    </div>
+    <div class="locbar">
+      <a class="locbar-item" href="/index.html">Home</a>
+      <div class="locbar-sep">&gt;</div>
+      <b class="locbar-here">Software</b>
+    </div>
+    <div id="popup-bg" class="d-none">
+      <div id="popup-box" class="p-3 appear-animation">
+        <p id="popup-title" class="text-center"></p>
+        <div class="indent">
+          <div id="popup-body" class="p-3">
+            <h3 id="popup-content-header-top" class="mt-3"></h3>
+            <h5 id="popup-content-body" class="mt-3"></h5>
+            <h4 id="popup-content-header-bottom" class="mt-3"></h4>
+          </div>
+          <div id="popup-actions" class="p-3"></div>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div class="container-lg">
+        <div id="banner-no-js" class="banner-red">
+          <strong>JavaScript is not loaded.</strong> Functionality is limited.
+        </div>
+        <div class="credit-box" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; text-align: left; width: 100%;">
+          <h1>Wedjat Programming Language</h1>
+          <p>Wedjat is an in-development command-based programming language written entirely from scratch, and written without an <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">Abstract Syntax Tree</a>.</p>
+          <p>Wedjat was created as a learning experience, and is not a fully fledged programming language. Some conventional features of a programming language are currently missing, such as arrays or proper syntax error checking.</p>
+      
+          <h2>Dependencies</h2>
+          <ul>
+              <li><a href="https://www.lua.org/">Lua</a></li>
+          </ul>
+      
+          <h2>Installation and Usage</h2>
+          <ol>
+              <li>Move the <code>wedjat-exec</code> script to any directory listed in your <code>$PATH</code> (such as /usr/bin)</li>
+              <li>Create and open a file with the file extension <code>.wdj</code>.</li>
+              <li>Write Wedjat code!</li>
+              <li><code>wedjat-exec &lt;/path/to/file&gt;</code></li>
+          </ol>
+      
+          <h2>Wedjat's Basics</h2>
+          <p>A program written in the Wedjat programming language is made up of a list of statements, each separated by a semicolon (<code>;</code>). Each statement contains a single command in the following format:</p>
+          <pre><code>baseCommand &lt;arg1&gt; &lt;arg2&gt; &lt;arg3&gt; &lt;etc...&gt;;</code></pre>
+          <p>Arguments passed to a Wedjat command can be of several different "data types":</p>
+          <ol>
+              <li><strong>Strings (str)</strong> - A string of characters. By default, any argument passed to a command is a string. String arguments containing spaces need to be wrapped in quotes (<code>"</code>).</li>
+              <pre><code>myCommand mystring;</code></pre>
+              <pre><code>myCommand "my string";</code></pre>
+      
+              <li><strong>Numbers (int)</strong> - An integer or floating point number. Number arguments are denoted by wrapping the argument in colons (<code>:</code>).</li>
+              <pre><code>myCommand :420:;</code></pre>
+              <pre><code>myCommand :12.34:;</code></pre>
+      
+              <li><strong>Booleans (bol)</strong> - A bool value, True or False. Argument is wrapped around single quotes (<code>'</code>).</li>
+              <pre><code>myCommand 'True';</code></pre>
+              <pre><code>myCommand 'False';</code></pre>
+      
+              <li><strong>Blocks (blk)</strong> - A block of code / list of statements. Wedjat allows you to pass entire blocks of code as an argument, as well as store them in variables.</li>
+              <pre><code>myCommand {
+          someOtherCommand randomargument;
+          someOtherCommand :420:;
+          someOtherCommand 'True';
+      };</code></pre>
+          </ol>
+      
+          <h2>Comments</h2>
+          <p>Single-line comments in the Wedjat programming language are written as follows:</p>
+          <pre><code>> Comment here
+      > Another comment</code></pre>
+          <p>Comments start at the <code>&gt;</code> symbol, and are terminated at the next newline. All comments are removed in the interpreter's internal rendition of the source text before the text is formatted into a list of statements.</p>
+      
+          <h2>Variables</h2>
+          <p>In Wedjat, variables must be declared with a name and specific type with the <code>define</code> command before they are used. Data can be written to variables with the <code>set</code> command. An argument passed to a command can be replaced with the contents of a variable by passing the name of the variable wrapped in parentheses as the argument.</p>
+          <p>Take the following code as an example:</p>
+          <pre><code>define myString str;
+      define myNumber int;
+      define myBool bol;
+      define myBlock blk;
+      
+      set myString "My beautiful string.";
+      set myNumber :5:;
+      set myBool 'True';
+      set myBlock {
+          write "hmmmm yes";
+      };
+      
+      write (myString);
+      write (myNumber);
+      write (myBool);</code></pre>
+      
+          <h2>Input and Output</h2>
+          <p>Wedjat has some very basic I/O commands.</p>
+          <ul>
+              <li><strong><code>write &lt;arg1&gt; &lt;arg2&gt; &lt;etc...&gt;</code></strong> - Writes to the standard output the string representation of any String, Number, or Boolean arguments passed to it. Supports <code>\n</code> and <code>\t</code> as escape characters for newline and tab.</li>
+              <li><strong><code>read &lt;variable name&gt;</code></strong> - Reads string data from the standard input and writes the data to the given variable. Variable must be of type String.</li>
+          </ul>
+          <p>Example code:</p>
+          <pre><code>define userInput str;
+      
+      write aaaaaaaaaa\n "f f f ff" :69: 'True';
+      
+      read userInput;
+      write (userInput);</code></pre>
+      
+          <h2>Comparisons</h2>
+          <p>Wedjat supports comparing between two values with the <code>if</code> command.</p>
+          <p>Comparison operators:</p>
+          <ul>
+              <li><code>=</code> - Is equal to. (I think I forgot to implement a "not equal to" lol)</li>
+              <li><code>#</code> - Not.</li>
+              <li><code>&</code> - And.</li>
+              <li><code>/</code> - Or.</li>
+          </ul>
+          <p>Example code:</p>
+          <pre><code>define p int;
+      define q int;
+      
+      set p :10:;
+      set q :100:;
+      
+      if (p) = :1: {
+          write "its 1";
+      } (p) = :5: {
+          write "its 5";
+      } else {
+          write idk;
+      };</code></pre>
+          <p>The order of operations can be forced by passing a Left parenthesis and Right parenthesis, like in other languages. Otherwise, the order of operations follows the same order used in Lua.</p>
+          <p>Example code:</p>
+          <pre><code>if "(" (p) = :10: / (p) = :5: ) & (q) = :100: {
+          write "yes";
+      };</code></pre>
+          <p>Notice how the Left parenthesis needs to be encased in quotes. If it wasn't, the interpreter would attempt to read the argument as a variable to insert.</p>
+      
+          <h2>Loops</h2>
+          <p>The Wedjat programming language supports two types of loops with the <code>for</code> and <code>repeat</code> commands.</p>
+          <p>To forcefully break out of a loop, use the <code>break</code> command.</p>
+      
+          <h3>The for Command</h3>
+          <p>The <code>for</code> command in Wedjat follows traditional for loop syntax. The following code snippet will loop through a set of numbers. It starts at one, finishes at 10, increments by 1 after each iteration, and stores the number value of the current iteration in the provided variable <code>i</code>:</p>
+          <pre><code>define i int;
+      
+      for i :1: :10: :1: {
+          write \n (i);
+      };</code></pre>
+      
+          <h3>The repeat Command</h3>
+          <p>The <code>repeat</code> command will forever repeat execution of the code block passed to it until broken by <code>break</code>:</p>
+          <pre><code>> Only runs once, and does nothing, as the loop is broken immediately.
+      repeat {
+          break;
+      };</code></pre>
+      
+          <h2>Mathematical Operations</h2>
+          <p>Wedjat can perform mathematical operations with the all-encompassing <code>math</code> command. It expects an expression, in which each part of the expression is its own unique argument. It then stores the Number data in the variable provided.</p>
+          <p>Example code:</p>
+          <pre><code>define result int;
+      
+      math result :1: + :1:;
+      write (result);</code></pre>
+          <p>Valid mathematical operators:</p>
+          <ul>
+              <li><code>+</code> - Plus.</li>
+              <li><code>-</code> - Minus.</li>
+              <li><code>*</code> - Multiply.</li>
+              <li><code>/</code> - Divide.</li>
+              <li><code>^</code> - Power.</li>
+              <li><code>%</code> - Modulus.</li>
+              <li><code>(</code> - Left parenthesis (for forcing the order of operations.) (Must be encased in quotes.)</li>
+              <li><code>)</code> - Right parenthesis (for forcing the order of operations.)</li>
+          </ul>
+      
+          <h2>Misc Commands</h2>
+          <ul>
+              <li><strong><code>sleep &lt;number&gt;</code></strong> - Pauses the program for <code>&lt;number&gt;</code> amount of seconds.</li>
+              <li><strong><code>type &lt;string variable name&gt; &lt;argument&gt;</code></strong> - Writes the type (<code>int</code>, <code>str</code>, <code>bol</code>, <code>blk</code>) of the argument provided into the String variable provided.</li>
+              <li><strong><code>strcat &lt;string variable name&gt; &lt;string argument&gt; &lt;string argument&gt;</code></strong> - Concatenates all strings provided and stores the output in the String variable provided.</li>
+              <li><strong><code>tostr &lt;string variable name&gt; &lt;argument&gt;</code></strong> - Takes the string representation of the data supplied as the argument and writes it into the String variable provided.</li>
+              <li><strong><code>toint &lt;number variable name&gt; &lt;string argument&gt;</code></strong> - Converts a string representation of a number back into a real number and writes the data to the Number variable provided. (Useful in conjunction with <code>read</code>)</li>
+              <li><strong><code>runblock &lt;block argument&gt;</code></strong> - Runs the provided code block.</li>
+              <li><strong><code>kill</code></strong> - Kills the program.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/navbar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
+  <script src="/js/background.js"></script>
+  <script src="/js/extras.js"></script>
+</body>
+
+</html>
