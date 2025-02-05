@@ -105,33 +105,38 @@ myCommand {
     someOtherCommand randomargument;
     someOtherCommand :420:;
     someOtherCommand 'True';
-};</code></pre>
+};
+</code></pre>
           </ol>
       
           <h2>Comments</h2>
           <p>Single-line comments in the Wedjat programming language are written as follows:</p>
-          <pre><code>> Comment here
-      > Another comment</code></pre>
+          <pre><code>
+> Comment here
+> Another comment
+</code></pre>
           <p>Comments start at the <code>&gt;</code> symbol, and are terminated at the next newline. All comments are removed in the interpreter's internal rendition of the source text before the text is formatted into a list of statements.</p>
       
           <h2>Variables</h2>
           <p>In Wedjat, variables must be declared with a name and specific type with the <code>define</code> command before they are used. Data can be written to variables with the <code>set</code> command. An argument passed to a command can be replaced with the contents of a variable by passing the name of the variable wrapped in parentheses as the argument.</p>
           <p>Take the following code as an example:</p>
-          <pre><code>define myString str;
-      define myNumber int;
-      define myBool bol;
-      define myBlock blk;
-      
-      set myString "My beautiful string.";
-      set myNumber :5:;
-      set myBool 'True';
-      set myBlock {
-          write "hmmmm yes";
-      };
-      
-      write (myString);
-      write (myNumber);
-      write (myBool);</code></pre>
+          <pre><code>
+define myString str;
+define myNumber int;
+define myBool bol;
+define myBlock blk;
+
+set myString "My beautiful string.";
+set myNumber :5:;
+set myBool 'True';
+set myBlock {
+    write "hmmmm yes";
+};
+
+write (myString);
+write (myNumber);
+write (myBool);
+</code></pre>
       
           <h2>Input and Output</h2>
           <p>Wedjat has some very basic I/O commands.</p>
@@ -140,12 +145,14 @@ myCommand {
               <li><strong><code>read &lt;variable name&gt;</code></strong> - Reads string data from the standard input and writes the data to the given variable. Variable must be of type String.</li>
           </ul>
           <p>Example code:</p>
-          <pre><code>define userInput str;
-      
-      write aaaaaaaaaa\n "f f f ff" :69: 'True';
-      
-      read userInput;
-      write (userInput);</code></pre>
+          <pre><code>
+define userInput str;
+
+write aaaaaaaaaa\n "f f f ff" :69: 'True';
+
+read userInput;
+write (userInput);
+</code></pre>
       
           <h2>Comparisons</h2>
           <p>Wedjat supports comparing between two values with the <code>if</code> command.</p>
@@ -157,25 +164,29 @@ myCommand {
               <li><code>/</code> - Or.</li>
           </ul>
           <p>Example code:</p>
-          <pre><code>define p int;
-      define q int;
-      
-      set p :10:;
-      set q :100:;
-      
-      if (p) = :1: {
-          write "its 1";
-      } (p) = :5: {
-          write "its 5";
-      } else {
-          write idk;
-      };</code></pre>
+          <pre><code>
+define p int;
+define q int;
+
+set p :10:;
+set q :100:;
+
+if (p) = :1: {
+    write "its 1";
+} (p) = :5: {
+    write "its 5";
+} else {
+    write idk;
+};
+</code></pre>
           <p>The order of operations can be forced by passing a Left parenthesis and Right parenthesis, like in other languages. Otherwise, the order of operations follows the same order used in Lua.</p>
           <p>Example code:</p>
-          <pre><code>if "(" (p) = :10: / (p) = :5: ) & (q) = :100: {
-          write "yes";
-      };</code></pre>
-          <p>Notice how the Left parenthesis needs to be encased in quotes. If it wasn't, the interpreter would attempt to read the argument as a variable to insert.</p>
+          <pre><code>
+if "(" (p) = :10: / (p) = :5: ) & (q) = :100: {
+    write "yes";
+};
+</code></pre>
+          <p>Notice how the Left parenthesis needs to be encased in quotes. If it weren't, the interpreter would attempt to read the argument as a variable to insert.</p>
       
           <h2>Loops</h2>
           <p>The Wedjat programming language supports two types of loops with the <code>for</code> and <code>repeat</code> commands.</p>
@@ -183,26 +194,33 @@ myCommand {
       
           <h3>The for Command</h3>
           <p>The <code>for</code> command in Wedjat follows traditional for loop syntax. The following code snippet will loop through a set of numbers. It starts at one, finishes at 10, increments by 1 after each iteration, and stores the number value of the current iteration in the provided variable <code>i</code>:</p>
-          <pre><code>define i int;
-      
-      for i :1: :10: :1: {
-          write \n (i);
-      };</code></pre>
+          <pre><code>
+define i int;
+
+for i :1: :10: :1: {
+    write \n (i);
+};
+</code></pre>
       
           <h3>The repeat Command</h3>
           <p>The <code>repeat</code> command will forever repeat execution of the code block passed to it until broken by <code>break</code>:</p>
-          <pre><code>> Only runs once, and does nothing, as the loop is broken immediately.
-      repeat {
-          break;
-      };</code></pre>
+          <pre><code>
+> Only runs once, and does nothing, as the loop is broken immediately.
+repeat {
+    break;
+};
+</code></pre>
       
           <h2>Mathematical Operations</h2>
           <p>Wedjat can perform mathematical operations with the all-encompassing <code>math</code> command. It expects an expression, in which each part of the expression is its own unique argument. It then stores the Number data in the variable provided.</p>
           <p>Example code:</p>
-          <pre><code>define result int;
-      
-      math result :1: + :1:;
-      write (result);</code></pre>
+          <pre><code>
+define result int;
+
+math result :1: + :1:;
+write (result);
+</code></pre>
+          <p>Internally, the equation passed to the <code>math</code> command is converted into the Lua equivalent, and is calculated using Lua's backend.</p>
           <p>Valid mathematical operators:</p>
           <ul>
               <li><code>+</code> - Plus.</li>
@@ -215,7 +233,7 @@ myCommand {
               <li><code>)</code> - Right parenthesis (for forcing the order of operations.)</li>
           </ul>
       
-          <h2>Misc Commands</h2>
+          <h2>Miscellaneous Commands</h2>
           <ul>
               <li><strong><code>sleep &lt;number&gt;</code></strong> - Pauses the program for <code>&lt;number&gt;</code> amount of seconds.</li>
               <li><strong><code>type &lt;string variable name&gt; &lt;argument&gt;</code></strong> - Writes the type (<code>int</code>, <code>str</code>, <code>bol</code>, <code>blk</code>) of the argument provided into the String variable provided.</li>
