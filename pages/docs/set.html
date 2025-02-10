@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="KP-Korea.org - ThirdEyeSearch" />
-  <meta property="og:description" content="A search engine for Google dorking" />
-  <title>KP-Korea.org - ThirdEyeSearch</title>
+  <meta property="og:title" content="KP-Korea.org - Set" />
+  <meta property="og:description" content="A TUI library for Lua" />
+  <title>KP-Korea.org - Set</title>
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/fromBootstrap.css" />
   <link rel="stylesheet" href="/css/background.css" />
@@ -65,59 +65,12 @@
           <strong>JavaScript is not loaded.</strong> Functionality is limited.
         </div>
         <div class="credit-box" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; text-align: left; width: 100%;">
-          <h2>ThirdEyeSearch</h2>
-          <p>ThirdEyeSearch is a TUI Google Dorking search engine powered by the <a href="https://www.exploit-db.com/google-hacking-database">Google Hacking Database</a>. It is capable of displaying and browsing through the database and launching the various searches provided, all from within the terminal.</p>
-          <p>The TUI system used by ThirdEyeSearch has been written entirely from scratch.</p>
+          <h2>Set</h2>
+          <p>Set is a Lua library that easily lets you create your own TUI applications.
 
-          <h3>Installation</h3>
-
-          <h4>Dependencies</h4>
-          <ul>
-            <li><a href="https://www.lua.org/">Lua</a></li>
-            <li><a href="https://w3m.sourceforge.net/">W3M</a></li>
-          </ul>
-
-          <h4>Program Installation</h4>
-          <p>ThirdEyeSearch is not packaged for any package manager. An installation script is provided that expects a Linux-based or Unix-like operating system.</p>
-          <pre>
-          git clone https://github.com/mizosu97/thirdeyesearch
-          cd thirdeyesearch
-          sudo chmod +x install
-          sudo ./install
-          </pre>
-
-          <h3>Usage</h3>
-
-          <h4>Launching the Program</h4>
-          <p>ThirdEyeSearch will automatically download a new database from the GHDB on each launch, unless explicitly told not to.</p>
-
-          <p>Commands:</p>
-          <ul>
-            <li><code>thirdeyesearch</code> - Launch ThirdEyeSearch.</li>
-            <li><code>thirdeyesearch x</code> - Launch ThirdEyeSearch without updating the database.</li>
-          </ul>
-
-          <h4>Browsing</h4>
-          <p>The user interface of ThirdEyeSearch is made up of two parts: the interactive display/list and the command bar.</p>
-          <p>On the main menu, a numbered list of categories is displayed in the interactive display. You can open a category with the following command:</p>
-          <pre>
-          open &lt;number&gt;
-          </pre>
-          <p>Where &lt;number&gt; corresponds to the number next to the displayed listing.</p>
-
-          <p>You can use the Left and Right arrow keys to scroll through the category's contents.</p>
-
-          <p>From here, you can search a listed Google Dork query in the W3M web browser with the following command:</p>
-          <pre>
-          search &lt;number&gt;
-          </pre>
-          <p>By using the <code>search custom</code> command, you can input your own query.</p>
-
-          <h4>Other Commands</h4>
-          <ul>
-            <li><code>close</code> - Return to the main menu.</li>
-            <li><code>quit</code> - Quit the program.</li>
-          </ul>
+            It doesn't have all of the features I would like it to have yet, though it's completely functional where it stands today.
+            
+            Documentation for implementing Set into a program of your own will be written when there is time. For now, look at the example programs in the <a href="https://github.com/The-Duat/set">Github repository</a>.</p>
         </div>
       </div>
     </div>
