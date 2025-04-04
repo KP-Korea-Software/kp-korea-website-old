@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="KP-Korea.org - RedStar E.F." />
+  <meta property="og:description" content="A versatile server-sided exploitation framework for Roblox" />
+  <title>KP-Korea.org - RedStar E.F.</title>
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/fromBootstrap.css" />
+  <link rel="stylesheet" href="/css/background.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/elements.css" />
+  <link rel="stylesheet" href="/css/responsiveness.css" />
+</head>
+
+<body>
+  <video id="background-video" autoplay muted loop>
+    <source src="/vids/parade.mp4" type="video/mp4">
+  </video>
+  <div id="background"></div>
+  <div id="ribbon"></div>
+  <div id="body">
+    <nav class="navbar bg-dark" data-bs-theme="dark">
+      <a class="p-2 logo" href="/index.html"></a>
+      <a class="navbar-item active" href="/pages/software.html">Software</a>
+      <a class="navbar-item" href="/pages/games.html">Games</a>
+      <a class="navbar-item" href="/pages/other.html">Other</a>
+      <a class="navbar-item" href="/pages/author.html">Author</a>
+      <a class="navbar-item" href="/pages/misc.html">Misc</a>
+      <div class="navbar-menu-button-holder">
+        <div class="navbar-menu-button"></div>
+      </div>
+    </nav>
+    <div class="nav-hidden navbar-menu-holder">
+      <div class="navbar-menu">
+        <a class="navbar-menu-item active" href="/pages/software.html">Software</a>
+        <a class="navbar-menu-item" href="/pages/games.html">Games</a>
+        <a class="navbar-menu-item" href="/pages/other.html">Other</a>
+        <a class="navbar-menu-item" href="/pages/author.html">Author</a>
+        <a class="navbar-menu-item" href="/pages/misc.html">Misc</a>
+      </div>
+      <div class="navbar-menu-underlay"></div>
+    </div>
+    <div class="locbar">
+      <a class="locbar-item" href="/index.html">Home</a>
+      <div class="locbar-sep">&gt;</div>
+      <b class="locbar-here">Software</b>
+    </div>
+    <div id="popup-bg" class="d-none">
+      <div id="popup-box" class="p-3 appear-animation">
+        <p id="popup-title" class="text-center"></p>
+        <div class="indent">
+          <div id="popup-body" class="p-3">
+            <h3 id="popup-content-header-top" class="mt-3"></h3>
+            <h5 id="popup-content-body" class="mt-3"></h5>
+            <h4 id="popup-content-header-bottom" class="mt-3"></h4>
+          </div>
+          <div id="popup-actions" class="p-3"></div>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div class="container-lg">
+        <div id="banner-no-js" class="banner-red">
+          <strong>JavaScript is not loaded.</strong> Functionality is limited.
+        </div>
+        <div class="credit-box" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; text-align: left; width: 100%;">
+          <h2>RedStar Exploitation Framework</h2>
+          <p>The RedStar Exploitation Framework is a free and open source serversided exploitation utility designed to attack a Roblox game's core elements. Rather than simply giving you tools or flashy lights, RedStar allows you to affect the game on a global scale. RedStar includes utilities for tampering with Datastores and Administrative panels, tools for gathering information on various aspects of a game, tools for single-server administration, and more.</p>
+          <br>
+          <h3>Script Editor</h3>
+          <p>The script editor provided by the RedStar exploitation framework allows you to execute Lua code on the server by use of <a href="https://github.com/Rerumu/FiOne">FiOne</a>.
+
+            Other modules within RedStar may forward scripts to the editor for execution and/or additional tinkering.</p>
+          <img class="thumbtwo" src="/img/redstar/r1.png" alt="Image" width="600" height="300">
+          <br>
+          <br>
+          <h3>Object Explorer</h3>
+          <p>RedStar incorporates <a href="https://devforum.roblox.com/u/tyridge77">tyridge77's</a> <a href="https://devforum.roblox.com/t/live-game-explorerv33/2693615">Live-Game Explorer</a>, allowing you to view all of the objects within a game from both the perspective of the Server and the Client. Live-Game Explorer has been modified to function properly without the need for issuing HTTP requests to retrieve its APIs.</p>
+          <img class="thumbtwo" src="/img/redstar/r2.png" alt="Image" width="600" height="300">
+          <br>
+          <br>
+          <h3>Remote Scanning</h3>
+          <p>RedStar includes an advanced utility for scanning, monitoring, and invoking a game's Remote Events. With serversided access, RedStar can also fire remote events from another user in the current server, and can intercept and display data sent to Remote Events.</p>
+          <p>RedStar monitoring "SomeRemote", which is fired every 5 seconds with the given string.</p>
+          <div class="container">
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r3.png" alt="Image" width="600" height="300">
+            </div>
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r4.png" alt="Image" width="600" height="300">
+            </div>
+          </div>
+          <h4>Invoking a Remote Event</h4>
+          <ol>
+            <li>Select the player the signal should come from.</li>
+            <li>Add arguments via the '+' button. Change argument type and set argument values as necessary.</li>
+            <li>Hit Play.</li>
+          </ol>
+          <div class="container">
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r5.png" alt="Image" width="600" height="300">
+            </div>
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r6.png" alt="Image" width="600" height="300">
+            </div>
+          </div>
+          <img class="thumbtwo" src="/img/redstar/r7.png" alt="Image" width="600" height="300">
+          <br>
+          <br>
+          <h3>Player Administration</h3>
+          <p>RedStar allows you to manage players in the current server with a variety of actions.</p>
+          <p>Simple actions:</p>
+          <ol>
+            <li>Kick - Kicks the player from the current server.</li>
+            <li>SBan - Bans the player from the current server.</li>
+            <li>Ghost - Hides the player from the game's Leaderboard and Escape menu, making it seem as if they have left the server.</li>
+            <li>Crash - Crashes the player.</li>
+            <li>Kill - Kills the player.</li>
+            <li>GoTo - Teleports you to the player.</li>
+            <li>Bring - Teleports the player to you.</li>
+            <li>CopyUI - Copies all GUI on the player's screen to your screen.</li>
+            <li>RedStar (Currently Unusable) - Loads a copy of RedStar onto the player.</li>
+          </ol>
+          <p>Advanced actions:</p>
+          <ol>
+            <li>Teleport - Teleports the player to the given Place.</li>
+            <li>ForceChat - Forces the player to send a chat message. Works with Legacy Chat only.</li>
+          </ol>
+          <p>Other:</p>
+          <ol>
+            <li>Export - Exports the player to RedStar's script editor for additional tinkering.</li>
+          </ol>
+          <div class="container">
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r8.png" alt="Image" width="600" height="300">
+            </div>
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r9.png" alt="Image" width="600" height="300">
+            </div>
+          </div>
+          <h3>CreatorSploit</h3>
+          <p>CreatorSploit, or CSploit, is an advanced utility that can detect and generate payloads to tamper with popular server administration models. For example, ranking players, banning players, etc. If CSploit detects any supported model to be in the game, an entry for it will be automatically added to the CSploit page.</p>
+          <p>Current payload list:</p>
+          <ol>
+            <li>HD Admin (Rank, Unrank, and Permban)</li>
+            <li>Kohl's Admin Infinite (Role, Unrole, and Permban)</li>
+            <li>Adonis Admin (All features, explained later.)</li>
+          </ol>
+          <p>More payloads will be added to CSploit in the future as RedStar development progresses.</p>
+          <h4>Adonis</h4>
+          <p>Excerpt taken from RedStar's CSploit Adonis tutorial:</p>
+          <p><i>Adonis is an extremely secure administration framework. As expected, attacking it is a bit complicated.
+          </i></p>
+          <p><i>RedStar is able to attack Adonis by importing a secondary Adonis model into the game. Within this secondary model, you are ranked as "Creator", giving you full access to all commands within the secondary model. The command prefix for the secondary model is '>'.</i></p>
+          <p><i>If both the secondary Adonis model and the game's native Adonis model share the same Datastore and Datastore Encryption Key, then any game-wide changes made within the secondary model will apply to the game's native model. (e.x. permbanning players, ranking players)
+          </i></p>
+          <p><i>The Datastore Name can be found within RedStar's Datastores module.</i></p>
+          <p><i>The Datastore Encryption Key is set by the game's developer, and is tucked away within the Adonis Settings modulescript, which is usually parented to nil. In some games, the Settings modulescript may not be parented to nil, and can be located and read from in RedStar's Modulescripts module. If the developer has not set a custom Datastore Encryption Key, Adonis uses "CHANGE_THIS" as the default Key.</i></p>
+          <div class="container">
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r10.png" alt="Image" width="600" height="300">
+            </div>
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r11.png" alt="Image" width="600" height="300">
+            </div>
+          </div>
+          <div class="container">
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r12.png" alt="Image" width="600" height="300">
+            </div>
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r13.png" alt="Image" width="600" height="300">
+            </div>
+          </div>
+          <h3>Modulescript Info</h3>
+          <p>RedStar's Modulescripts module allows you to scan for modulescripts within the game. RedStar can require a modulescript, parse through the returned data, and format it to be read by the user.</p>
+          <div class="container">
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r14.png" alt="Image" width="600" height="300">
+            </div>
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r15.png" alt="Image" width="600" height="300">
+            </div>
+          </div>
+          <h3>Datastore Browser</h3>
+          <p>RedStar's Datastore Browser lets you view all of the datastores within a game, their keys, and the contents of their keys. Datastores and Datastore Keys can be exported to RedStar's Script Editor for additional tinkering.</p>
+          <div class="container">
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r16.png" alt="Image" width="600" height="300">
+            </div>
+            <div class="thumb-wrapper">
+              <img class="thumbtwo" src="/img/redstar/r17.png" alt="Image" width="600" height="300">
+            </div>
+          </div>
+          <img class="thumbtwo" src="/img/redstar/r18.png" alt="Image" width="600" height="300">
+          <h3>Server Console</h3>
+          <p>This is just a server console log. Nothing special here. Text resets every 500 entries to conserve memory.</p>
+          <img class="thumbtwo" src="/img/redstar/r19.png" alt="Image" width="600" height="300">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/navbar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
+  <script src="/js/background.js"></script>
+  <script src="/js/extras.js"></script>
+</body>
+
+</html>
