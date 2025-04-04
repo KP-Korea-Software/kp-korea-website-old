@@ -76,6 +76,26 @@ body {
   text-shadow: 0.5px 0.5px 4px white;
 }
 
+#content {
+  transform: scale(0.8) translate(0%, -10%);
+}
+
+.container {
+  display: flex;            /* Display as flex to align children side by side */
+  justify-content: space-between;  /* Space between the items (optional) */
+}
+
+.thumb-wrapper {
+  width: 50%;               /* Each div takes up 50% of the container width */
+  padding: 10px;            /* Optional padding for spacing */
+  box-sizing: border-box;   /* Ensure padding is included in width */
+}
+
+.thumbtwo {
+  width: 100%;              /* Image takes up the full width of its parent */
+  height: auto;             /* Maintain aspect ratio */
+}
+
 .logo {
   transition-duration: 50ms;
   cursor: pointer;
@@ -85,6 +105,14 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+#body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+#body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .logo:hover {
@@ -111,12 +139,12 @@ body {
       hsla(0, 0%, 100%, 0.01) 2px,
       hsla(0, 0%, 100%, 0.01) 4px),
     linear-gradient(to bottom,
-      hsla(0, 0%, 15%, 0.75),
-      hsla(0, 0%, 5%, 0.75) 49%,
-      hsla(0, 0%, 0%, 0.75) 50%,
-      hsla(0, 0%, 0%, 0.75));
+      hsla(167, 48%, 13%, 0.9),
+      hsla(167, 48%, 13%, 0.9) 49%,
+      hsla(167, 70%, 9%, 0.9) 50%,
+      hsla(167, 70%, 9%, 0.9));
   padding: 0;
-  height: 64px;
+  height: 48px;
   --bs-bg-opacity: 0;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -183,7 +211,7 @@ body {
 .locbar {
   display: flex;
   position: sticky;
-  top: 65px;
+  top: 48px;
   align-items: start;
   justify-content: flex-start;
   z-index: 3;
@@ -195,12 +223,12 @@ body {
       hsla(0, 0%, 100%, 0.01) 2px,
       hsla(0, 0%, 100%, 0.01) 4px),
     linear-gradient(to bottom,
-      hsla(0, 0%, 15%, 0.6),
-      hsla(0, 0%, 5%, 0.6) 49%,
-      hsla(0, 0%, 0%, 0.6) 50%,
-      hsla(0, 0%, 0%, 0.6));
+      hsla(166, 53%, 19%, 0.8),
+      hsla(166, 53%, 19%, 0.8) 49%,
+      hsla(166, 70%, 16%, 0.8) 50%,
+      hsla(166, 70%, 16%, 0.8));
   padding: 0;
-  height: 32px;
+  height: 24px;
   --bs-bg-opacity: 0;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
