@@ -23,30 +23,14 @@
   <div id="background"></div>
   <div id="ribbon"></div>
   <div id="body">
-    <nav class="navbar bg-dark" data-bs-theme="dark">
-      <a class="p-2 logo" href="/index.html"></a>
-      <a class="navbar-item" href="/pages/software.html">Software</a>
-      <a class="navbar-item" href="/pages/games.html">Games</a>
-      <a class="navbar-item" href="/pages/other.html">Other</a>
-      <a class="navbar-item" href="/pages/author.html">Author</a>
-      <a class="navbar-item" href="/pages/misc.html">Misc</a>
-      <div class="navbar-menu-button-holder">
-        <div class="navbar-menu-button"></div>
-      </div>
-    </nav>
-    <div class="nav-hidden navbar-menu-holder">
-      <div class="navbar-menu">
-        <a class="navbar-menu-item" href="/pages/software.html">Software</a>
-        <a class="navbar-menu-item" href="/pages/games.html">Games</a>
-        <a class="navbar-menu-item" href="/pages/other.html">Other</a>
-        <a class="navbar-menu-item" href="/pages/author.html">Author</a>
-        <a class="navbar-menu-item" href="/pages/misc.html">Misc</a>
-      </div>
-      <div class="navbar-menu-underlay"></div>
-    </div>
-    <div class="locbar">
-      <b class="locbar-here">Home</b>
-    </div>
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch('/navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+    </script>
     <div id="content">
       <div class="container-lg">
         <div id="banner-no-js" class="banner-red">
