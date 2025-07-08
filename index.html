@@ -26,17 +26,19 @@
   <nav class="navbar bg-dark" data-bs-theme="dark">
     <a class="p-2 logo" href="/index.html"></a>
     <a class="navbar-item" href="/pages/aboutus.html">Software</a>
-    <a class="navbar-item" href="/pages/games.html">Games</a>
-    <a class="navbar-item" href="/pages/other.html">Other</a>
-    <a class="navbar-item" href="/pages/author.html">Author</a>
-    <a class="navbar-item" href="/pages/misc.html">Misc</a>
+    <a class="navbar-item" href="/pages/ourteam.html">Games</a>
+    <a class="navbar-item" href="/pages/products.html">Other</a>
+    <a class="navbar-item" href="/pages/publications.html">Author</a>
+    <a class="navbar-item" href="/pages/contact.html">Misc</a>
     <div class="navbar-menu-button-holder">
       <div class="navbar-menu-button"></div>
     </div>
   </nav>
- 
-  <div class="locbar">
-    <b class="locbar-here">Home</b>
+  <div class="locbar" id="news-bar" style="display: none;">
+    <div class="news-ticker">
+      <span class="breaking-label">BREAKING NEWS: &nbsp;</span>
+      <a href="#" id="news-link" target="_blank" rel="noopener noreferrer" class="news-link">Loading...</a>
+    </div>
   </div>
     <div id="content">
       <div class="container-lg">
@@ -89,6 +91,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
   <script src="/js/background.js"></script>
   <script src="/js/extras.js"></script>
+  <script src="/js/news.js"></script>
 </body>
 
 </html>
